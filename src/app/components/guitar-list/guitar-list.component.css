@@ -1,0 +1,96 @@
+.container {
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  margin-top: 2rem;
+}
+
+.search input {
+  padding: 0.3rem 0.2rem;
+  background-color: #eee;
+  border-radius: 2px;
+}
+.search button {
+  padding: 0.3rem 0.2rem;
+  margin-left: 0.1rem;
+}
+
+table {
+  width: 100%;
+  /* margin-top: 3rem; */
+  border: 2px solid black;
+  padding: 0.5rem;
+  background-color: #eee;
+}
+table th {
+  padding: 0.5rem 0;
+  letter-spacing: 1px;
+  background-color: #555;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 2px;
+}
+table td {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.315);
+  margin: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.open-form-btn {
+  padding: 0.1rem 0.5rem;
+}
+.form-div {
+  height: 4rem;
+  background-color: #ddd;
+  border-radius: 3px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  /* display: none; */
+}
+
+.form {
+  display: flex;
+  height: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.form-control {
+  display: flex;
+  margin: 0 0.5rem;
+}
+.form-control label {
+  margin-right: 2px;
+  font-size: 0.9rem;
+}
+.form-control input {
+  width: 9rem;
+  height: 1.3rem;
+}
+
+.form-control input:focus {
+  border-color: darkblue;
+}
+.form button[type="submit"] {
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+#add-guitar-btn {
+  margin-right: auto;
+  margin-bottom: 0.1rem;
+}

@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>Guitar List</h1>
+
+  <div class="search">
+    <input type="text" placeholder="search..." id="search">
+    <button>Go!</button>
+  </div>
+  <button id="add-guitar-btn" class="open-form-btn">Add Guitar</button>
+  <div class="form-div">
+
+    <form class="form">
+      <div class="form-control">
+        <label for="company">Company</label>
+        <input type="text">
+      </div>
+      <div class="form-control">
+        <label for="model">Model</label>
+        <input type="text">
+      </div>
+      <div class="form-control">
+        <label for="year">Year</label>
+        <input type="number">
+      </div>
+      <div class="form-control">
+        <label for="price">Price</label>
+        <input type="number">
+      </div>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Made By</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fender</td>
+        <td>Stratocaser USA</td>
+        <td>1984</td>
+        <td>1000$</td>
+        <td><button class="open-form-btn">Edit</button></td>
+        <td><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>Gibson</td>
+        <td>Les Paul</td>
+        <td>1956</td>
+        <td>70,000$</td>
+        <td><button class="open-form-btn">Edit</button></td>
+        <td><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>Ibanez</td>
+        <td>XR5000</td>
+        <td>2013</td>
+        <td>500$</td>
+        <td><button class="open-form-btn">Edit</button></td>
+        <td><button>Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
