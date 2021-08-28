@@ -35,3 +35,6 @@ Route::put('updateGuitar/{id}',[GuitarController::class,'updateGuitar']);
 
 //Delete Guitar
 Route::delete('deleteGuitar/{id}',[GuitarController::class,'deleteGuitar']);
+
+//Search Items
+Route::get('search/{q}',[GuitarController::class,'search']);

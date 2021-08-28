@@ -1,5 +1,5 @@
 export interface Guitar {
-  _id: string;
+  id: string;
   company: string;
   model: string;
   year: number;

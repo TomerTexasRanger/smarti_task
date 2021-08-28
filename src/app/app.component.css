@@ -1,4 +1,6 @@
 main {
   max-width: 60rem;
   margin: 0 auto;
+  margin-bottom: 3rem;
+  min-height: calc(100vh - 70px);
 }

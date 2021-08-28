@@ -1,0 +1,50 @@
+#backBtn {
+  padding: 0.2rem 0.3rem;
+  margin: 1rem 0.3rem;
+}
+
+.form-div {
+  height: 4rem;
+  background-color: #ddd;
+  border-radius: 3px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  /* display: none; */
+}
+
+.form {
+  display: flex;
+  height: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.form-control {
+  display: flex;
+  margin: 0 0.5rem;
+}
+.form-control label {
+  margin-right: 2px;
+  font-size: 0.9rem;
+}
+.form-control input {
+  width: 9rem;
+  height: 1.3rem;
+}
+
+.form-control input:focus {
+  border-color: darkblue;
+}
+.form button[type="submit"] {
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+#add-guitar-btn {
+  margin-right: auto;
+  margin-bottom: 0.1rem;
+}

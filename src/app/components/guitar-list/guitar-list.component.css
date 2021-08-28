@@ -22,12 +22,32 @@
   margin-left: 0.1rem;
 }
 
+.autoCom {
+  position: absolute;
+  height: 100px;
+  width: 230px;
+  background-color: #aaa;
+  border: 1px solid black;
+  border-radius: 3px;
+  overflow: scroll;
+}
+.autoCom {
+  display: none;
+}
+.autoCom.active {
+  display: block;
+}
+.searchOption:hover {
+  background-color: rgba(0, 0, 0, 0.705);
+  color: white;
+}
+
 table {
   width: 100%;
-  /* margin-top: 3rem; */
   border: 2px solid black;
-  padding: 0.5rem;
+  padding: 0.7rem;
   background-color: #eee;
+  border-radius: 7px;
 }
 table th {
   padding: 0.5rem 0;
@@ -50,6 +70,7 @@ table td {
   padding: 0.1rem 0.5rem;
 }
 .form-div {
+  margin-top: 3rem;
   height: 4rem;
   background-color: #ddd;
   border-radius: 3px;
@@ -58,9 +79,10 @@ table td {
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
-  /* display: none; */
 }
-
+.form-div p {
+  transform: translateY(-120%);
+}
 .form {
   display: flex;
   height: 2rem;
@@ -93,4 +115,12 @@ table td {
 #add-guitar-btn {
   margin-right: auto;
   margin-bottom: 0.1rem;
+}
+
+.update-form-panel {
+  display: none;
+}
+
+.update-form-panel.active {
+  display: block;
 }

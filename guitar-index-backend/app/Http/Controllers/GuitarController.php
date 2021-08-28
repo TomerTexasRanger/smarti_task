@@ -43,5 +43,22 @@ $guitar-> delete();
 return response()->json(null,204);
 }
 
+public function search($q){
+$q.trim('');
+// $results= Guitar::where('company', 'like', "%".$q."%")->where('model','like',"%".$q."%")->get();
+// $results= Guitar::where('model','like',"%".$q."%")->orwhere('model','like',"%".$q."%")->get();
 
+
+$results= Guitar::where(function ($query) use($q) {
+        $query->where('company', 'like', '%' . $q . '%')
+           ->orWhere('model', 'like', '%' . $q . '%')
+           ->orWhere('year', 'like', '%' . $q . '%')
+           ->orWhere('price', 'like', '%' . $q . '%');
+      })
+->get();
+
+
+return response()->json($results,200);
+
+}
 }

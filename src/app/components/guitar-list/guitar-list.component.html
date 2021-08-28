@@ -1,31 +1,35 @@
 <div class="container">
   <h1>Guitar List</h1>
 
-  <div class="search">
-    <input type="text" placeholder="search..." id="search">
-    <button>Go!</button>
-  </div>
-  <button id="add-guitar-btn" class="open-form-btn">Add Guitar</button>
+  <form class="search" [formGroup]="search" (ngSubmit)="searchQ()">
+    <input type="text" autocomplete="off" name="search" formControlName="search" placeholder="search..." id="search" (ngModelChange)="autoComplete()">
+    <div class="autoCom">
+      <p class="searchOption" *ngFor="let guitar of guitars">{{guitar.company}} {{guitar.model}} {{guitar.year}}</p>
+
+    </div>
+    <button type="submit"> Go!</button>
+  </form>
+
   <div class="form-div">
 
-    <form class="form">
+    <form class="form" [formGroup]="form" (ngSubmit)="addGuitar()">
       <div class="form-control">
         <label for="company">Company</label>
-        <input type="text">
+        <input type="text" name="company" formControlName="company">
       </div>
       <div class="form-control">
         <label for="model">Model</label>
-        <input type="text">
+        <input type="text" name="model" formControlName="model">
       </div>
       <div class="form-control">
         <label for="year">Year</label>
-        <input type="number">
+        <input type="number" name="year" formControlName="year">
       </div>
       <div class="form-control">
         <label for="price">Price</label>
-        <input type="number">
+        <input type="number" name="price" formControlName="price">
       </div>
-      <button type="submit">Add</button>
+      <button type="submit">Add Guitar</button>
     </form>
   </div>
   <table class="table">
@@ -38,30 +42,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Fender</td>
-        <td>Stratocaser USA</td>
-        <td>1984</td>
-        <td>1000$</td>
-        <td><button class="open-form-btn">Edit</button></td>
-        <td><button>Delete</button></td>
+      <tr *ngFor="let guitar of guitars">
+        <td>{{guitar.company}}</td>
+        <td>{{guitar.model}}</td>
+        <td>{{guitar.year}}</td>
+        <td>{{guitar.price}}</td>
+        <td><button class="open-form-btn" routerLink="edit/{{guitar.id}}">Edit</button></td>
+        <td><button (click)="deleteGuitar(guitar.id)">Delete</button></td>
       </tr>
-      <tr>
-        <td>Gibson</td>
-        <td>Les Paul</td>
-        <td>1956</td>
-        <td>70,000$</td>
-        <td><button class="open-form-btn">Edit</button></td>
-        <td><button>Delete</button></td>
-      </tr>
-      <tr>
-        <td>Ibanez</td>
-        <td>XR5000</td>
-        <td>2013</td>
-        <td>500$</td>
-        <td><button class="open-form-btn">Edit</button></td>
-        <td><button>Delete</button></td>
-      </tr>
+
     </tbody>
   </table>
 
